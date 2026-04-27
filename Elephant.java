@@ -4,8 +4,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The Elephant, our hero.
  * 
  * @author Aidan
- * @version Ver 1.7 April 2026
- * Last edited: Ver 1.7
+ * @version Ver 1.8 April 2026
+ * Last edited: Ver 1.8
  */
 public class Elephant extends Actor
 {
@@ -39,6 +39,7 @@ public class Elephant extends Actor
             removeTouching(Apple.class);
             MyWorld world = (MyWorld)getWorld();
             world.createApple();
+            world.increaseScore();
         }
     }
 }

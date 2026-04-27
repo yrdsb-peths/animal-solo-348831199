@@ -4,17 +4,34 @@ import greenfoot.*;
  *  The World our hero lives.
  * 
  * @author Aidan
- * @version Ver 1.7 April 2026
- * last edited: Ver 1.6
+ * @version Ver 1.8 April 2026
+ * last edited: Ver 1.8
  */
 public class MyWorld extends World {
+    public int score = 0;
+    Label scoreLabel;
+    
     public MyWorld() {
         super(600, 400, 1);
         
+        //Create the elephant object
         Elephant elephant = new Elephant();
-        addObject(elephant,300,200);
+        addObject(elephant,300,300);
+        
+        //Create a label
+        scoreLabel = new Label(0,80);
+        addObject(scoreLabel,50,50);
         
         createApple();
+    }
+    
+    /**
+     * Increase score
+     */
+    public void increaseScore()
+    {
+        score++;
+        scoreLabel.setValue(score);
     }
     
     /**
