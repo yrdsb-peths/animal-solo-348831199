@@ -4,8 +4,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The Elephant, our hero.
  * 
  * @author Aidan
- * @version Ver 1.3 April 2026
- * Last edited: Ver 1.1
+ * @version Ver 1.4 April 2026
+ * Last edited: Ver 1.4
  */
 public class Elephant extends Actor
 {
@@ -16,6 +16,13 @@ public class Elephant extends Actor
     public void act()
     {
         // Add your action code here.
-        move(1);
+        if(Greenfoot.isKeyDown("left"))
+        {
+            move(-1);
+        }
+        else if(Greenfoot.isKeyDown("right"))
+        {
+            move(1);
+        }
     }
 }
