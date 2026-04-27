@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The Elephant, our hero.
  * 
  * @author Aidan
- * @version Ver 1.8 April 2026
+ * @version Ver 1.9 April 2026
  * Last edited: Ver 1.8
  */
 public class Elephant extends Actor

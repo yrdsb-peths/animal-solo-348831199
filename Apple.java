@@ -4,8 +4,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Food for our elephant.
  * 
  * @author Aidan 
- * @version Ver 1.8 April 2026
- * Last edited: Ver 1.3
+ * @version Ver 1.9 April 2026
+ * Last edited: Ver 1.9
  */
 public class Apple extends Actor
 {
@@ -16,6 +16,16 @@ public class Apple extends Actor
     public void act()
     {
         // Add your action code here.
-        setLocation(getX(),getY() + 1);
+        int x = getX();
+        int y = getY() + 2;
+        setLocation(x,y);
+        
+        //Remove apple and draw game over when apple gets to bottom
+        MyWorld world = (MyWorld) getWorld();
+        if(getY() >= world.getHeight())
+        {
+            world.gameOver();
+            world.removeObject(this);
+        }
     }
 }

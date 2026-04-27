@@ -4,15 +4,15 @@ import greenfoot.*;
  *  The World our hero lives.
  * 
  * @author Aidan
- * @version Ver 1.8 April 2026
- * last edited: Ver 1.8
+ * @version Ver 1.9 April 2026
+ * last edited: Ver 1.9
  */
 public class MyWorld extends World {
     public int score = 0;
     Label scoreLabel;
     
     public MyWorld() {
-        super(600, 400, 1);
+        super(600, 400, 1, false);
         
         //Create the elephant object
         Elephant elephant = new Elephant();
@@ -23,6 +23,15 @@ public class MyWorld extends World {
         addObject(scoreLabel,50,50);
         
         createApple();
+    }
+    
+    /**
+     * End the game and draw 'Game Over'
+     */
+    public void gameOver()
+    {
+        Label gameOverLabel = new Label("Game Over", 100);
+        addObject(gameOverLabel,300,200);
     }
     
     /**
