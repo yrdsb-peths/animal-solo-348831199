@@ -4,7 +4,7 @@ import greenfoot.*;
  *  The World our hero lives.
  * 
  * @author Aidan
- * @version Ver 1.6 April 2026
+ * @version Ver 1.7 April 2026
  * last edited: Ver 1.6
  */
 public class MyWorld extends World {
